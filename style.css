@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2e 0%, #0f0f1e 100%);
+    font-family: 'Arial', sans-serif;
+    color: #00ff41;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+    letter-spacing: 8px;
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+    }
+    50% {
+        text-shadow: 0 0 20px #00ff41, 0 0 30px #00ff41, 0 0 40px #00ff41;
+    }
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    padding: 20px;
+    background: rgba(0, 255, 65, 0.1);
+    border: 2px solid #00ff41;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.score .label {
+    font-size: 14px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.score-value {
+    font-size: 36px;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
+}
+
+.divider {
+    font-size: 30px;
+    opacity: 0.5;
+}
+
+#pongCanvas {
+    border: 2px solid #00ff41;
+    background-color: #0a0a0a;
+    display: block;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+.instructions {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 255, 65, 0.05);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    border-radius: 6px;
+    max-width: 500px;
+}
+
+.instructions p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.instructions strong {
+    color: #00ff41;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 32px;
+        letter-spacing: 4px;
+    }
+
+    .scoreboard {
+        width: 300px;
+    }
+
+    .score-value {
+        font-size: 28px;
+    }
+}
